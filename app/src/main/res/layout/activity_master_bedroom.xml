@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/empty_view1"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:textAlignment="center">
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:padding="16dp"
+            android:src="@drawable/emptystateui"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/addtimer"
+            android:background="@drawable/roundedbutton"
+            android:textColor="@color/White"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/bluegray"
+
+
+            android:text="Add Schedule"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/addtimer1"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="ADD"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/roundedbutton"
+       android:backgroundTint="@color/bluegray"
+        android:layout_marginRight="5dp"
+       />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/timerrec"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginTop="15dp" />
+
+
+</LinearLayout>
+

@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Timer"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/cardview1"
+        android:clickable="true"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:stateListAnimator="@animator/overlay"
+        card_view:cardCornerRadius="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        card_view:cardElevation="5dp"
+        android:layout_marginBottom="20dp">
+        <EditText
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/schedulename"
+            android:textSize="20sp"
+            android:textColor="@color/bluegray"
+            android:hint="Schedule Name"/>
+        <RelativeLayout
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:id="@+id/recempt"
+            android:visibility="invisible"
+           >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical"
+            android:text="This Field is Empty !"
+            android:textColor="@color/brightred"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/empt"
+            android:layout_marginStart="40dp"
+            android:maxLines="1"
+            android:textSize="20sp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cancel_button"
+            android:layout_marginTop="13dp"
+
+            android:layout_marginStart="5dp"
+
+            />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/cardview2"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/cardview1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:clickable="true"
+        android:stateListAnimator="@animator/overlay"
+        card_view:cardCornerRadius="15dp"
+        card_view:cardElevation="5dp"
+        android:layout_marginBottom="20dp">
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            android:padding="10dip"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+
+                android:id="@+id/roomname"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:text="Select room"
+                android:textColor="@color/bluegray"
+                android:textSize="25sp" />
+        <com.jaredrummler.materialspinner.MaterialSpinner
+            android:id="@+id/spinnerroom"
+            android:background="@drawable/roundedbutton"
+            android:backgroundTint="@color/bluegray"
+            android:textColor="#657383"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="125dp"
+
+            android:orientation="vertical"
+            android:padding="10dip"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+
+                android:id="@+id/appliancename"
+
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:text="Select Appliance"
+                android:textColor="@color/bluegray"
+                android:textSize="25dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="125dp">
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+
+                android:id="@+id/spinnerappliance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundedbutton"
+                android:backgroundTint="@color/bluegray"
+                android:textColor="#657383"
+                android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/switchonoff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/checkbox"
+                    android:layout_marginLeft="149dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/spinnerappliance"
+                    android:gravity="center_vertical"
+
+                    android:thumbTint="@color/goldenyellow"
+                    android:textOn="ON"
+                    android:textOff="OFF"
+                    android:textColor="@color/bluegray"
+                    android:thumbTintMode="multiply"
+                    android:trackTint="#657383" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+        android:id="@+id/cardview3"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/cardview2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:clickable="true"
+        android:stateListAnimator="@animator/overlay"
+        card_view:cardCornerRadius="15dp"
+        card_view:cardElevation="5dp"
+        android:layout_marginBottom="15dp">
+        <LinearLayout
+            android:id="@+id/linear_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            android:padding="10dip"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp">
+
+
+
+            <TextView
+
+                android:id="@+id/time"
+                android:hint="12:00 PM"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="7dp"
+                android:textColor="@color/goldenyellow"
+                android:textSize="25dp"
+
+               />
+
+                <ImageView
+                    android:layout_marginStart="10dp"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/night"
+                    android:id="@+id/timeimage"/>
+
+            </LinearLayout>
+            <com.jaredrummler.materialspinner.MaterialSpinner
+
+                android:background="@drawable/roundedbutton"
+                android:backgroundTint="@color/bluegray"
+                android:id="@+id/selection"
+                android:textColor="#657383"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                />
+
+
+                <LinearLayout
+                    android:visibility="invisible"
+                    android:id="@+id/linear_layout3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:textColor="@color/White"
+                        android:layout_weight="1.3"
+                        android:background="@drawable/badge"
+                        android:id="@+id/b1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+
+                        android:text="M"/>
+                    <Button
+                        android:textColor="@color/White"
+
+                        android:layout_weight="1.3"
+                        android:background="@drawable/badge"
+                        android:id="@+id/b2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+
+                        android:text="T"/>
+                    <Button
+                        android:textColor="@color/White"
+                        android:background="@drawable/badge"
+
+                        android:id="@+id/b3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1.3"
+                        android:text="W"/>
+                    <Button
+                        android:textColor="@color/White"
+                        android:background="@drawable/badge"
+                        android:layout_marginRight="5dp"
+                        android:id="@+id/b4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3"
+                        android:text="T"/>
+                    <Button
+                        android:textColor="@color/White"
+                        android:background="@drawable/badge"
+                        android:layout_marginRight="5dp"
+                        android:id="@+id/b5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3"
+                        android:text="F"/>
+                    <Button
+                        android:textColor="@color/White"
+                        android:background="@drawable/badge"
+                        android:layout_marginRight="5dp"
+                        android:id="@+id/b6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3"
+                        android:text="S"/>
+                    <Button
+                        android:textColor="@color/White"
+                        android:background="@drawable/badge"
+                        android:layout_marginRight="5dp"
+                        android:id="@+id/b7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3"
+                        android:text="S"/>
+
+                </LinearLayout>
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SAVE"
+                android:id="@+id/save"
+                android:textSize="20sp"
+                android:background="@drawable/roundedbutton"
+                android:backgroundTint="@color/bluegray"
+                android:textColor="@color/White"/>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+</RelativeLayout>
